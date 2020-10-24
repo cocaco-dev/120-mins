@@ -1,4 +1,4 @@
-import React, {useContext, Fragment} from 'react';
+import React, {useContext} from 'react';
 
 import authContext from '../context/auth/authContext';
 
@@ -9,13 +9,13 @@ import tokenAuth from '../config/tokenAuth'
 
 const Contacts = (props) => {
     const AuthContext = useContext(authContext);
-    const {authenticated, message, token} = AuthContext;
+    const {authenticated, token} = AuthContext;
     const onDelete = async () => {
         try {
             if(authenticated) {
                 tokenAuth(token);
                 
-                const response =  await axiosClient.delete(`/api/contact/${props.contact._id}`);
+                await axiosClient.delete(`/api/contact/${props.contact._id}`);
                 props.setUserContact({
                        ...props.userContact,
                     contacts: props.contacts.filter(contacto => contacto._id !== props.contact._id )

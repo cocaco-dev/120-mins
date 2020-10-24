@@ -4,15 +4,15 @@ import * as nodeMailer from 'nodemailer'
 
 const dataMail = {
     auth: {
-        host: process.env.EMAIL_HOST!,
+        host: 'loop-corporation.com',
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: process.env.EMAIL_ACCOUNT!, 
-            pass: process.env.EMAIL_PASS!, 
+            user: 'test@loop-corporation.com', 
+            pass: 'Lq2.gXKkbqr&', 
         }
     },
-    remitente: process.env.EMAIL_HOST!
+    remitente: `test@loop-corporation.com`
 
     
 };
@@ -22,7 +22,7 @@ const fillBodyMail = (body:string) => {
     <head>
             <meta name="viewport" content="width=device-width" />
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-            <title>NotificaciÃ³n Loop Corporation</title>
+            <title>NotificaciÃ³n</title>
             <style>
                 * {
                     margin: 0;

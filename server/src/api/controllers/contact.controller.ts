@@ -18,9 +18,9 @@ export const create =  async (req: Request, res: Response) =>{
     const  {firstname, lastname, email, contact} = req.body;
     
     const newContact = Contact.build({ firstname, lastname, email, contactnumber:contact, userId: req.currentUser!.id });
-    console.log(process.env.EMAIL_HOST, process.env.EMAIL_ACCOUNT, process.env.EMAIL_PASS)
+    
     await newContact.save();
-    // await sendMail([contact],'Your mail have been added','We added you in our contact list. Thank you')
+    sendMail([email],'Your mail have been added','We added you in our contact list. Thank you')
     res.status(201).send(newContact);
     
 }

@@ -8,7 +8,7 @@ import authContext from '../../context/auth/authContext'
 import './navbar.css';
 const Navbar = () => {
   const AuthContext = useContext(authContext);
-    const {authenticated, logout, user} = AuthContext;
+    const {authenticated, logout} = AuthContext;
     
       return ( 
         

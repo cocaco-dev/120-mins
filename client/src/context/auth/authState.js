@@ -9,7 +9,7 @@ import {
     SIGNUP_SUCCESS,
     USER_AUTHENTICATED,
     CLEAR_ALERT,
-    SHOW_ALERT, 
+    
     LOGOUT
 } from '../../types'
 

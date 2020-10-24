@@ -1,0 +1,110 @@
+.blk2 {
+    width: 200px!important;
+}
+
+
+@media only screen and (max-width: 954px){
+    .img-portfolio.img-responsive{
+        width: 30%!important;
+    }
+    header#top .text-vertical-center h3 {
+        font-size: 2rem;
+        margin: 0 auto!important;
+        width: auto!important;
+        
+    }
+    section#about .col-lg-12 {
+        width: auto!important;
+    }
+
+
+    aside.callout {
+        width: 100%!important;
+    }
+    aside.callout .text-vertical-center h1 {
+        width: auto!important;
+    }
+    .blk2 {
+        width: 100%!important;
+    }
+    aside.call-to-action.bg-primary h3 {
+        width: auto!important;
+    }
+    footer {
+        float:none!important;
+    }
+    .blk {
+        width: 100%!important;
+    }
+
+}
+
+@media only screen and (max-width: 754px){
+    .img-portfolio.img-responsive{
+        width: 50%!important;
+    }
+    header#top .text-vertical-center h3 {
+        font-size: 2rem;
+        margin: 0 auto!important;
+        width: auto!important;
+    }
+
+
+    aside.callout {
+        width: 100%!important;
+    }
+    aside.callout .text-vertical-center h1 {
+        width: auto!important;
+        font-size: 4rem;
+    }
+    .blk {
+        width: 100%!important;
+    }
+}
+
+
+@media only screen and (max-width: 454px){
+    .img-portfolio.img-responsive{
+        width: 50%!important;
+    }
+    header#top .text-vertical-center h3 {
+        font-size: 1.5rem;
+        margin: 0 auto!important;
+        
+    }
+    aside.callout {
+        width: 100%!important;
+    }
+    aside.callout .text-vertical-center h1 {
+        width: auto!important;
+        font-size: 3rem;
+    }
+    .blk {
+        width: auto!important;
+    }
+}
+
+
+@media only screen and (max-width: 320px){
+    .img-portfolio.img-responsive{
+        width: 50%!important;
+    }
+    header#top .text-vertical-center h3 {
+        font-size: 1rem;
+        margin: 0 auto!important;
+        
+    }
+    aside.callout {
+        width: 100%!important;
+    }
+    aside.callout .text-vertical-center h1 {
+        width: auto!important;
+        font-size: 3rem;
+    }
+    .blk {
+        width: auto!important;
+    }
+}
+
+
+

@@ -11,7 +11,7 @@ import NewContactForm from './NewContactForm'
 import UpdateContactForm from './UpdateContactForm'
 const LandingPage = () => {
     const AuthContext = useContext(authContext);
-    const {userAuthenticated, authenticated, message, token,user} = AuthContext;
+    const {userAuthenticated, authenticated, token,user} = AuthContext;
     const [userContact, setUserContact] = useState({
         contacts: [],
         totalPages: 1,
@@ -23,7 +23,7 @@ const LandingPage = () => {
         contactToBeUpdated:{}
     })
 
-    const {totalPages, currentPage, contacts, totalItems,pagesArray,newContact, updateContact,contactToBeUpdated} = userContact
+    const { currentPage, contacts,pagesArray,newContact, updateContact,contactToBeUpdated} = userContact
     useEffect(()=>{
         const token = localStorage.getItem('token');
         if(token) {
