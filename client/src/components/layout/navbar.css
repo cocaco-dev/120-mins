@@ -1,0 +1,187 @@
+.main-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    /* height: 0rem; */
+    display: grid;
+    grid-template-columns: 2fr 10fr 1fr;
+    align-items: center;
+    align-content:center; 
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 2rem;
+    grid-gap: 1rem;
+    z-index: 20;
+    background-color: #0e0f0f !important;
+    height: 5rem;
+padding-top: .1rem;
+-webkit-animation: slide-in-top .8s cubic-bezier(.25,.46,.45,.94) both;
+animation: slide-in-top .8s cubic-bezier(.25,.46,.45,.94) both;
+border-bottom-left-radius: 3rem;
+border-bottom-right-radius: 3rem;
+box-shadow: 0 5px 9px 4px rgba(0,0,0,.65);
+margin-bottom: 5rem;
+
+}
+
+.main-nav span.menu-toggle {
+    /* margin-top: 13px; */
+    display: inline-block;
+    cursor: pointer;
+    justify-self: center;
+}
+.main-nav span.menu-toggle i:nth-child(1),
+.main-nav span.menu-toggle i:nth-child(2) {
+    width: 30px;
+    display: block;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+    /* -webkit-transition: all .3s ease;
+    transition: all .3s ease; */
+}
+.main-nav span.menu-toggle i:nth-child(3) {
+    width: 30px;
+    display: block;
+    border-bottom: 2px solid white;
+}
+
+.main-nav .nav-items {
+    display: grid;
+    grid-template-columns: repeat(3,7rem);
+    justify-content: end;
+    align-items: center;
+}
+.menu-toggle-bg {
+    z-index: 50;
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(14, 13, 13, 0.589);
+    }
+
+.main-nav .nav-links {
+    /* margin:15px; */
+    text-align: center;
+    /* border-radius: 10px;    */
+}
+.main-nav .nav-buttons {
+    font-family: Raleway;
+    font-weight: semi-bold;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.main-nav .logo img {
+    /* margin-top: 1.5rem; */
+    width: 150px;      
+}
+.main-nav .logo-scroll img {
+    /* margin-top: 1.5rem; */
+    width: 60px; 
+    border-radius: 50px;
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;    
+}
+
+/* side menu */
+.side-menu{
+    position: fixed;
+    top: 0;
+    right: -200vw;
+    width: 400px;
+    height: 100vh;
+    overflow: auto;
+    transition: right .8s ease;
+    z-index: 51;
+
+}
+.side-menu.menu-open{
+    right: 0;
+    background-color: var(--primary-color);
+}
+.side-menu.menu-open::before{
+        opacity: 1;
+        right: 0;
+        z-index: 20;
+}
+.side-menu.menu-open .menu-side-h2 {
+    margin-bottom: 3rem;
+    text-decoration: none;
+    color: white;
+}
+.side-menu.menu-open h3 a{
+    text-decoration: none;
+    color: white;
+}
+.side-menu.menu-open h3{
+    color: white;
+    font-size: 2rem;
+}
+.side-menu.menu-open .side-menu-decoration {
+        width: 100%;
+        height: 100%;
+        transition: right 1s ease;
+        box-shadow: -1px 0 5px rgba(0,0,0,.1);
+        z-index: 20;
+        background: black;
+        padding: 40px 50px;
+        text-align: center;
+        border-bottom-right-radius: 15rem;
+        border-top-right-radius: 15rem
+
+}
+.side-menu.menu-open .x-config{
+    position: absolute;
+    top: 5px;
+    left: 30px ;
+    font-size: 3rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    color:var(--secondary-color);  
+    
+}
+.side-menu.menu-open .x-config:hover{
+    color:var(--primary-color);  
+}
+.side-menu ul {
+        list-style: none;
+    
+}
+.categoria-side {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+}
+.categoria-side li {
+        line-height: 2rem;
+}
+.categoria-side li a {
+        text-decoration: none;
+        color:var(--secondary-color);     
+}
+.categoria-side li a:hover {
+        color: var(--secondary-color);
+        font-weight: bold; 
+}
+.nav-active-button {
+       color: var(--primary-color);
+       font-weight: bold; 
+}
+/* Smartphones y tablet */
+@media only screen and (max-width: 800px) {
+    .main-nav {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        justify-items: center;
+    }
+    .main-nav .logo img {
+        /* margin-top: 1.5rem; */
+        width: 100px;      
+    }
+    .side-menu{
+        width: 100vw;
+    }
+
+}

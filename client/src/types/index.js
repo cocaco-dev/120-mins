@@ -1,0 +1,25 @@
+/* util context */
+export const UPDATE_SIZE = 'UPDATE_SIZE';
+export const UPDATE_YPOS = 'UPDATE_YPOS';
+export const CHANGE_BLOCK_SCROLL = 'CHANGE_BLOCK_SCROLL';
+
+
+
+
+export const LIMPIAR_ALERTA= 'LIMPIAR_ALERTA'
+export const MOSTRAR_ALERTA= 'MOSTRAR_ALERTA'
+
+export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS'
+export const SIGNUP_ERROR = 'SIGNUP_ERROR'
+export const USER_AUTHENTICATED = 'USER_AUTHENTICATED'
+export const SIGNIN_SUCCESS = 'SIGNIN_SUCCESS'
+export const SIGNIN_ERROR = 'SIGNIN_ERROR'
+export const LOGOUT = 'LOGOUT'
+export const CLEAR_ALERT= 'CLEAR_ALERT'
+export const SHOW_ALERT= 'SHOW_ALERT'
+
+
+export const CREATE_CONTACT = 'CREATE_CONTACT'
+export const CREATE_CONTACT_ERROR = 'CREATE_CONTACT_ERROR'
+export const EDIT_CONTACT = 'EDIT_CONTACT'
+export const DELETE_CONTACT = 'DELETE_CONTACT'

@@ -1,0 +1,62 @@
+version: '3.5'
+services:
+  backend:
+    container_name: backend
+    restart: always
+    depends_on: 
+      - mongo
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    build: ./server
+    ports:
+      - '4000:4000'
+    networks: 
+      - mongonodenet
+  frontend:
+    container_name: frontend
+    restart: always
+    depends_on: 
+      - mongo
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    build: ./client
+    ports:
+      - '80:80'
+    networks: 
+      - mongonodenet
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - mongo_data:/data/db
+      - /etc/localtime:/etc/localtime:ro
+    # environment: 
+      # - MONGO_INITDB_ROOT_USERNAME=admin
+      # - MONGO_INITDB_ROOT_PASSWORD=password
+    expose:
+      - 27017
+    networks: 
+      - mongonodenet
+  mongo-express:
+    image: mongo-express
+    depends_on: 
+      - mongo
+    environment: 
+      # - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      # - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_SERVER=mongo
+      - ME_CONFIG_BASICAUTH_USERNAME=hireme
+      - ME_CONFIG_BASICAUTH_PASSWORD=123456
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    networks: 
+      - mongonodenet
+    ports:
+      - 8080:8081
+    
+volumes:
+  mongo_data:
+    driver: local
+networks:
+  mongonodenet:
+    driver: bridge
